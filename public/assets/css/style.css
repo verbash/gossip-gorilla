@@ -1,0 +1,48 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 80px;
+  background-color: black;
+}
+
+h1,h2,h3,h4,h5,h6,a,p {
+  color: white;
+}
+
+.background-image {
+  background-image: url("../images/gorilla.jpg");
+  width: 200px;
+  height: 200px;
+  border-radius: 25%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.button1 {
+  display:inline-block;
+  padding:0.35em 1.2em;
+  border:0.1em solid #FFFFFF;
+  margin:0 0.3em 0.3em 0;
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-size:large;
+  font-weight:300;
+  color:green;
+  text-align:center;
+  transition: all 0.2s;
+  }
+  .button1:hover{
+  color:#000000;
+  background-color:#FFFFFF;
+  }
+
+  .rightbox {
+    float: right;
+    clear: both;
+
+  }

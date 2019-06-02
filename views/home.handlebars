@@ -1,0 +1,74 @@
+
+<a class="" href="/"><h1>Mongo Scraper</h1></a>
+  <div class="rightbox">
+    <h1>Gossip Gorilla</h1>
+    <div class="background-image"></div>
+    <p>gorilla news from gorillafund.org</p>
+  </div>
+
+  <div class="" id="">
+    <ul class="">
+      <li class="nav-item active">
+        <a class="button1 btn nav-link" href="/">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="button1 btn nav-link" href="/saved">Saved Articles</a>
+      </li>
+      <li class="nav-item">
+        <a class="button1 btn scrape-new">SCRAPE NEW ARTICLES!</a>
+      </li>
+      <li class="nav-item">
+        <a class="button1 btn clear">CLEAR ARTICLES!</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="">
+  <div class="">
+  </div>
+  <div class="">
+  </div>
+
+</div>
+<div class="container-fluid article-container">
+  {{#each articles}}
+  <div data-_id="{{this._id}}" class="card">
+    <div class="card-header">
+      <h3>
+        <a class="article-link" target="_blank" rel="noopener noreferrer" href="{{this.url}}">{{this.headline}}</a>
+        <a class="button1 btn save">Save Article</a>
+      </h3>
+    </div>
+    <div class="card-body">{{this.summary}}</div>
+  </div>
+  {{/each}} {{#unless articles.length}}
+  <div class='alert alert-warning text-center'>
+    <h4>Uh Oh. Looks like we don't have any new articles.</h4>
+  </div>
+  <div class="card">
+    <div class="card-header text-center">
+      <h3>What Would You Like To Do?</h3>
+    </div>
+    <div class="card-body text-center">
+      <h4>
+        <a class="scrape-new">Try Scraping New Articles</a>
+      </h4>
+      <h4>
+        <a href="/saved">Go to Saved Articles</a>
+      </h4>
+    </div>
+  </div>
+  {{/unless}}
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p>Gossip Gorilla Mongo Scraper</p>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/assets/javascript/index.js"></script>
